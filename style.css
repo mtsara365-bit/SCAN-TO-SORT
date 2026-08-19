@@ -1,0 +1,214 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background: #f4f5f7;
+
+    color: #222;
+
+}
+
+
+.header {
+
+    background: #ffffff;
+
+    padding: 25px 35px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-bottom: 1px solid #ddd;
+
+}
+
+
+.header h1 {
+
+    margin: 0;
+
+    font-size: 28px;
+
+}
+
+
+.header p {
+
+    margin: 5px 0 0;
+
+    color: #777;
+
+}
+
+
+#statusAPI {
+
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    background: #eee;
+
+    font-size: 13px;
+
+}
+
+
+.filtros {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+
+    padding: 20px 35px;
+
+    background: #fff;
+
+}
+
+
+select {
+
+    padding: 12px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 6px;
+
+    background: white;
+
+}
+
+
+.cards {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    padding: 20px 35px;
+
+}
+
+
+.card {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+
+}
+
+
+.card span {
+
+    font-size: 13px;
+
+    color: #777;
+
+}
+
+
+.card strong {
+
+    display: block;
+
+    margin-top: 10px;
+
+    font-size: 32px;
+
+}
+
+
+.grafico,
+.tabela {
+
+    background: white;
+
+    margin: 20px 35px;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+}
+
+
+.grafico h2,
+.tabela h2 {
+
+    margin-top: 0;
+
+}
+
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+}
+
+
+th,
+td {
+
+    padding: 12px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #eee;
+
+}
+
+
+@media (max-width: 900px) {
+
+    .cards {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .filtros {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .filtros {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
