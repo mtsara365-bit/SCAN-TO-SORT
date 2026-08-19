@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard Produtividade</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div>
+            <h1>Dashboard de Produtividade</h1>
+            <p>LSP-15 • Operação</p>
+        </div>
+
+        <div id="statusAPI">
+            Conectando...
+        </div>
+
+    </header>
+
+
+    <section class="filtros">
+
+        <select id="filtroData">
+            <option value="">Todas as datas</option>
+        </select>
+
+        <select id="filtroTurno">
+            <option value="">Todos os turnos</option>
+        </select>
+
+        <select id="filtroEstacao">
+            <option value="">Todas as estações</option>
+        </select>
+
+        <select id="filtroOperador">
+            <option value="">Todos os operadores</option>
+        </select>
+
+    </section>
+
+
+    <section class="cards">
+
+        <div class="card">
+
+            <span>VOLUME TOTAL</span>
+
+            <strong id="volumeTotal">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="card">
+
+            <span>PRODUTIVIDADE MÉDIA</span>
+
+            <strong id="produtividadeMedia">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="card">
+
+            <span>OPERADORES</span>
+
+            <strong id="totalOperadores">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="card">
+
+            <span>ESTAÇÕES</span>
+
+            <strong id="totalEstacoes">
+                0
+            </strong>
+
+        </div>
+
+    </section>
+
+
+    <section class="grafico">
+
+        <h2>Produtividade por Hora</h2>
+
+        <canvas id="graficoProdutividade"></canvas>
+
+    </section>
+
+
+    <section class="grafico">
+
+        <h2>Volume por Hora</h2>
+
+        <canvas id="graficoVolume"></canvas>
+
+    </section>
+
+
+    <section class="tabela">
+
+        <h2>Ranking de Operadores</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Operador</th>
+
+                    <th>Volume</th>
+
+                    <th>Produtividade</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="rankingOperadores">
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
